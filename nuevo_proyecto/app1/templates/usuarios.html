@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block contenido %}
+   <h1>Bienvenidos</h1>
+<ul>
+  {% for usuario in usuarios %}
+  <li>
+    <a href="/ingresar-datos/{{usuario.user.id}}">
+      {{usuario.user.first_name}} {{usuario.user.last_name}}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
+
+<hr>
+<h2>Viajar</h2>
+<p>Viajar es una de las experiencias más enriquecedoras y gratificantes que podemos disfrutar en la vida. No solo nos brinda la oportunidad de explorar nuevos destinos y conocer diferentes culturas, sino que también tiene numerosos beneficios para nuestro bienestar físico, mental y emocional.
+
+En primer lugar, viajar nos saca de nuestra rutina diaria y nos permite escapar del estrés y las preocupaciones. Al sumergirnos en entornos desconocidos, nuestra mente se desconecta de las responsabilidades cotidianas y se abre a nuevas perspectivas. El simple acto de explorar un nuevo lugar y descubrir sus maravillas nos ayuda a relajarnos, renovar nuestra energía y recargar nuestras baterías.
+
+Además, viajar nos brinda la oportunidad de ampliar nuestros horizontes culturales. Cada destino tiene su propia historia, tradiciones, gastronomía y forma de vida. Al sumergirnos en estas experiencias, abrimos nuestras mentes a la diversidad y aprendemos a apreciar las diferencias. Este contacto con nuevas culturas fomenta la tolerancia, el respeto y la empatía hacia los demás, lo cual es fundamental en un mundo cada vez más interconectado.</p>
+{% endblock %}
