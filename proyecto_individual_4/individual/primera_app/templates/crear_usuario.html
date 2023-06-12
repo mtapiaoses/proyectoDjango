@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block contenido %}
+{% load static %}
+<style>
+    /* Estilos generales del formulario */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Estilos para las etiquetas y campos de entrada */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para el contenedor de mensajes de error */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+</style>
+<form method="post" class="form-container">
+
+ <h2>Creación de usuarios</h2>
+    {% csrf_token %}
+    {{formulario}}
+    <!--
+    <label>Nombre</label>
+
+    {{ formulario.Nombre}}<br />
+    <label>Apellido</label>
+
+    {{ formulario.Apellido}}<br />
+
+    <label>Correo</label>
+  
+    {{ formulario.Correo}}<br />
+
+     <label>Telefono</label>
+    
+    {{ formulario.Telefono }}<br />
+
+     <label>Pais</label>
+    
+    {{ formulario.Pais }}<br />
+-->
+
+    <button type="submit">Registrar</button>
+
+</form>
+{% endblock %}

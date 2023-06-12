@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block contenido %}
+
+<table class="table">
+<tbody>
+<tr>
+    <td>NOMBRE</td>
+    <td>{{usuario.user.first_name}}</td>
+</tr>
+
+<tr>
+    <td>APELLIDO</td>
+    <td>{{usuario.user.last_name}}</td>
+</tr>
+
+
+<tr>
+    <td>EMAIL</td>
+    <td>{{usuario.user.email}}</td>
+</tr>
+<tr>
+    <td>EDAD</td>
+    <td>{{usuario.edad}}</td>
+</tr>
+<tr>
+    <td>TELEFONO</td>
+    <td>{{usuario.telefono}}</td>
+</tr>
+
+<tr>
+    <td>DIRECCION</td>
+    <td>{{usuario.direccion}}</td>
+</tr>
+</tbody>
+</table>
+{% endblock %}

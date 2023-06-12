@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block contenido %}
+   <h1>Bienvenidos a la pagina</h1>
+<ul>
+  {% for usuario in usuario_listar %}
+  <li>
+    <a href="/usuario_individual/{{usuario.id}}">
+      {{usuario.first_name}} {{usuario.last_name}}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<hr>
+<h2>Metaverso</h2>
+<p>El metaverso es una tecnología emergente que está ganando cada vez más atención y promete cambiar la forma en que interactuamos con el mundo digital. Se refiere a un espacio virtual compartido en el que las personas pueden conectarse, interactuar y participar en experiencias inmersivas en tiempo real. En el metaverso, los usuarios pueden explorar entornos virtuales, socializar con otras personas, realizar transacciones comerciales, crear y compartir contenido, e incluso llevar a cabo actividades educativas y laborales.</p>
+{% endblock %}
